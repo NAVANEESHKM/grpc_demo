@@ -1,0 +1,24 @@
+syntax ="proto3";
+
+option go_package="github.com/NAVANEESHKM/grpc_demo";
+
+package task;
+
+service TaskService{
+    rpc AddTask(Task) returns (TaskResponse);
+    rpc GetTasks (Empty) returns (TaskList);
+}
+
+message Task{
+    string id=1;
+    string title =2;
+    bool completed =3;
+}
+message TaskResponse{
+    string id=1;
+}
+message TaskList{
+    repeated Task tasks=1;
+}
+
+message Empty{}
