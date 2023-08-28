@@ -30,9 +30,7 @@ func main(){
 	}
 	fmt.Printf("Added task with ID: %s\n",addResp.Id)
 
-
-
-
+	
 	// response,err:=client.AddTask(context.Background(),&pb.HelloRequest{Name:name})
 	tasksResp,err:=client.GetTasks(context.Background(),&pb.Empty{})
 	if err!=nil{
