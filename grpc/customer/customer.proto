@@ -1,0 +1,28 @@
+syntax ="proto3";
+
+option go_package="github.com/NAVANEESHKM/grpc_demo";
+
+package customer;
+
+service CustomerService{
+    rpc InsertCustomer(Customer) returns (CustomerResponse);
+    
+}
+
+message Customer{
+    int32 Customer_ID=1;
+    string Customer_Name=2;
+    int32 Account_ID=3;
+    int32 Balance=4;
+    int32 Bank_ID=5;
+    
+}
+
+message CustomerResponse{
+     int32 Response_Customer_ID=1;
+}
+
+
+
+
+
